@@ -30,6 +30,7 @@ var zipCode = "68136"
 ;  Each variable is shown on its own line
 ;  It doesn't look like I need a new line character - console must start each on its own line
 */
+
 console.log("My first name is " + firstName);
 console.log("My last name is " + lastName);
 console.log("My current age is " +  currentAge);
