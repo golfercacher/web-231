@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  kenney-assignment-3.1.js
+; Title:  kenney-assignment-3.2.js
 ; Author: Professor Krasso - referenced starter code and video
 ; Date:   08 December 2019
 ; Modified By: Sean Kenney
