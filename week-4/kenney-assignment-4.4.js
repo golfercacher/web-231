@@ -2,9 +2,11 @@
 ============================================
 ; Title:  kenney-assignment-4.4.js
 ; Author: Professor Krasso - referenced starter code and video
-; Date:   12 December 2019
+; Date:   17 December 2019
 ; Modified By: Sean Kenney
-; Description: Program
+; Description: Program that displays all items as the originally
+; are in the array, then display array items in a sorted fashion,
+; then display a value in the array if it matches a particular value.
 ; I also referenced W3C schools reference code on arrays
 ; https://www.w3schools.com/js/js_arrays.asp
 ;===========================================
