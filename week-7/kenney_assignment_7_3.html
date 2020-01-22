@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+============================================
+; Title:  client-side-javascript.html
+; Author: Professor Krasso
+; Date:   25 June 2017
+; Modified by: Sean Kenney
+; Date Modified: 1/22/20
+; Description: HTML page that has javascript included
+; using javascript to show lists two different ways.
+;===========================================
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sean Kenney Exercise 7.3 Date 1/22/2020</title>
+  <link href="../site.css" type="text/css" rel="stylesheet" />
+</head>
+<h1>SHOPPING LIST v.1</h1>
+
+<body>
+
+<div id="list"></div>
+    <script>
+        document.write("<ol>");
+        document.write("<li>Oranges</li>");
+        document.write("<li>Apples</li>");
+        document.write("<li>Pears</li>");
+        document.write("<li>Limes</li>");
+        document.write("<li>Lemons</li>");
+        document.write("</ol>");
+    </script>
+ 
+
+<div id="list2">
+<script>
+  document.getElementById('list2').innerHTML = "<h1>SHOPPING LIST v.2</h1>" +
+    "<table id=fruits>" +
+    "<thead>" +
+    "<tr>" +
+    "<th>ID</th>" +
+    "<th>Item</th>" +
+    "</tr>" +
+    "</thead>" +
+    "<tbody>" +
+    "<tr><td>1</td><td>Oranges</td></tr>" +
+    "<tr><td>2</td><td>Apples</td></tr>" +
+    "<tr><td>3</td><td>Pears</td></tr>" +
+    "<tr><td>4</td><td>Limes</td></tr>" +  
+    "<tr><td>4</td><td>Lemons</td></tr>" + 
+    "</tbody>" +
+    "</table>"
+</script>
+</div>
+
+
+</body>
+</html>
