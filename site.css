@@ -12,19 +12,14 @@ h1, h2 {
     font-family: 'Oswald', Verdana, Arial, sans-serif;
 }
 
-#fruits {
-  border-collapse: collapse;
-  width: 10%;
-}
+
 
 #fruits td, #fruits th {
   border: 1px solid #ddd;
-  padding: 8px;
 }
 
 #fruits tr:nth-child(even){background-color: skyblue;}
 
-#fruits tr:hover {background-color: #ddd;}
 
 #fruits th {
   padding-top: 12px;
