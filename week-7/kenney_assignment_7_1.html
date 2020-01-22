@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- code snippets sourced from -->
+<!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_title -->
+<!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_doc_open -->
+
+<html>
+  <head>
+  <title>Sean Kenney</title>
+  </head>
+    <body>
+
+    <h2>Sean Kenney - Assignment 7.1 1/22/2020</h2>
+
+    <p id="demo"></p>
+
+    <script>
+    document.getElementById("demo").innerHTML =
+    "The title of this document is: " + document.title;
+    </script>
+    
+    <p id="demo">Click the button to replace this document with new content.</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <script>
+        function myFunction() {
+          document.open("text/html","replace");
+          document.write("<h2>Learning about the HTML DOM is fun!</h2>");
+          document.close();
+        }
+        </script>
+
+    </body>
+</html>
