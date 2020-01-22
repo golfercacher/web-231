@@ -1,0 +1,47 @@
+<!--
+==================================================
+; Title:  lintel-exercise-7.3.html
+; Author: Jeff Lintel
+; Date:   20 January 2020
+; Modified by: Sean Kenney
+; Date Modified 22 January 2020
+; Description: Demonstrate Javascript DOM
+; Manipulation
+;=================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 7.1</title>
+
+</head>
+<body>
+
+<div id="books">
+  <ul>
+    <script>
+      //innerHTML.write("<li>JavaScript - The Definitive Guide</li><li>Express in Action</li><li>JavaScript Design Patterns</li><li>Interface Design</li>")
+        //first error found here
+        document.write("<li>JavaScript - The Definitive Guide</li><li>Express in Action</li><li>JavaScript Design Patterns</li><li>Interface Design</li>")
+    </script>
+  </ul>
+</div>
+
+
+<!--<div class="authors"> -->
+<!-- second error found here -->
+ <div id="authors">
+  <ul>
+    <script>
+      document.getElementById("authors").innerHTML = "<li>Daniel Flanagan</li>" +
+      "<li>Addy Osmani</li>" +
+      "<li>Evan Hahn</li>" +
+      "<li>Marc Silver</li>"
+    </script>
+  </ul>
+</div>
+
+</body>
+<!--added end html tag -->
+</html>
