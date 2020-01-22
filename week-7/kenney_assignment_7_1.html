@@ -5,27 +5,29 @@
 
 <html>
   <head>
-  <title>Sean Kenney</title>
+  <title>Sean Kenney Assignment 7.1</title>
   </head>
     <body>
-
+    
+    
+    <h1>This program has two errors in it.</h1>
     <h2>Sean Kenney - Assignment 7.1 1/22/2020</h2>
 
     <p id="demo"></p>
 
     <script>
     document.getElementById("demo").innerHTML =
-    "The title of this document is: " + document.title;
+    "The title of this document is: " + document.PAGENAME;  <!-- -->
     </script>
     
     <p id="demo">Click the button to replace this document with new content.</p>
 
-        <button onclick="myFunction()">Try it</button>
+        <button onclick="Function()">Try it</button> <!-- -->
 
         <script>
         function myFunction() {
           document.open("text/html","replace");
-          document.write("<h2>Learning about the HTML DOM is fun!</h2>");
+          document.write("<h2>DOM Mamipulation </h2>");
           document.close();
         }
         </script>
