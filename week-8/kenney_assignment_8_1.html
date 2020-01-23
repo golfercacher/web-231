@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- ============================================
+; Title:  kenney-assignment-8.1.html
+; Author: Sean Kenney - no starter code referenced.
+; Any code sources used will be noted below
+; Date:   23 January 2020
+; Modified By: Sean Kenney
+; Description: HTML with jQuery.  Program intentionally has two errors
+;
+; The program will show an H1 and H2 and 4 p tags with a button
+; The button, when clicked, should hide the paragraphs.
+;
+; One error is a syntax error - something is not typed correctly
+; One error is more of a logic error - remember, things within the <p> tag 
+; should be hidden when the button is clicked.  If anything else is hidden,
+; that is incorrect and needs to be fixed.
+;
+,
+;================================================ -->
+;
+<!-- code snippets sourced from -->
+<!-- https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_hide_p -->
+<!--  -->
+
+<html>
+    <head>
+        <title>Sean Kenney Assignment 8.1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("button").push(function(){ <!-- -->
+            $("h1").hide();   <!-- -->
+          });
+        });
+        </script>
+    </head>
+   
+    <body>
+        <h1>This is an H1 heading</h1>
+        <h2>This is an H2 heading</h2>
+        
+        <p>This is the first paragraph</p>
+        <p>This is the second paragraph</p>
+        <p>This is the third paragraph</p>
+        <p>This is the fourth paragraph</p>
+        
+        <!-- When this button is clicked anything with a <p> tag should be hidden.  -->
+        <button>Too hide the paragraphs, click me!</button>
+
+    </body>
+</html>
