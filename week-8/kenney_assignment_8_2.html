@@ -1,0 +1,50 @@
+<!--
+==================================================
+; Title:  lintel-exercise-7.3.html
+; Author: Richard Krasso
+; Date:   24 January 2020
+; Modified by: Sean Kenney
+; Date Modified 25 January 2020
+; Description: Display the contents of an array
+;=================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+
+  <style type="text/css">
+      html {
+          font-family: Roboto;
+          font-weight: 300, 400, 500;
+      }  
+    ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="fruits"></div>
+
+<script>
+    var fruits = ["Apples", "Bananas", "Pears", "Apricots", "Grapes"];
+    
+    var id = [1, 2, 3, 4, 5];
+
+    var out = "<h2>Fruits</h2><ul>";
+    
+    for (var x = 0; x < fruits.length; x++) {
+        out += "<li>" + id[x] + " " +fruits[x] + "</li>";
+    }
+    out += "</ul>";
+
+    document.getElementById('fruits').innerHTML = out;
+</script>
+
+</body>
+</html>
