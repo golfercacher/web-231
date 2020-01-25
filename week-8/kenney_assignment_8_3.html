@@ -1,0 +1,113 @@
+<!--
+==================================================
+; Title:  lintel-exercise-8.3.html
+; Author: Richard Krasso
+; Date:   24 January 2020
+; Modified by: Sean Kenney
+; Date Modified 25 January 2020
+; Description: Show and hide contents.  Also alert
+; when certain actions take place.
+; Code referenced for toggle - https://www.w3schools.com/jquery/eff_toggle.asp
+;
+;=================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+  
+    <style type="text/css">
+html {
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Quattrocento', Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+h1, h2 {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+#fruits td, #fruits th {
+  border: 1px solid #ddd;
+}
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+  <!--<link rel="stylesheet" href="/path/to/your/root/css/file"> -->
+  <link rel="stylesheet" href="../site.css">
+  
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").toggle();
+      });
+    });
+</script>
+
+</head>
+<body>
+
+<h2>Paragraph Title</h2>
+<p>
+    Suspendisse congue pretium velit, id molestie lorem luctus pharetra. Etiam ullamcorper, nibh ut fermentum suscipit, metus felis posuere tortor, sed ultricies ipsum quam finibus ipsum. Morbi tincidunt consectetur libero sagittis ultrices. Cras velit erat, interdum eget bibendum sed, facilisis eu diam. Vivamus pulvinar vestibulum dolor. Morbi et nisl a est blandit tempor. Nunc eget diam quam. Proin eget dolor nibh. Morbi nunc erat, vulputate at velit eu, scelerisque cursus felis. Pellentesque eu nisi id leo gravida sodales. Vivamus at dui quis justo rhoncus blandit. Pellentesque non velit quis tellus vehicula gravida eu at urna. In aliquam nec libero et scelerisque. Integer eget sapien vestibulum ex feugiat sagittis. Donec vel arcu mi. Sed ut iaculis urna, eget sagittis enim.
+</p>
+
+<button>Toggle</button>
+
+<script type="text/javascript">
+
+</script>
+
+<br/>
+<br/>
+<div id ="fruits">
+<table>
+    <tr>
+        <td><a href="#" class="fruitId">1</a></td>
+        <td>Apple</td>
+    </tr>
+    <tr>
+        <td><a href="#" class="fruitId">2</a></td>
+        <td>Peach</td>
+    </tr>
+    <tr>
+        <td><a href="#" class="fruitId">3</a></td>
+        <td>Watermelon</td>
+    </tr>
+    <tr>
+        <td><a href="#" class="fruitId">4</a></td>
+        <td>Pear</td>
+    </tr>
+    <tr>
+        <td><a href="#" class="fruitId">5</a></td>
+        <td>Banana</td>
+    </tr>
+</table>
+</div>
+<script>
+    $(function () {
+        $("p").click(function () {
+            $(this).css("background-color", "red");
+            $(this).css("color", "white");
+        });
+
+        $(".fruitId").click(function (event) {
+            event.preventDefault();
+            var fruitId = $(this).text();
+            var fruitType = $(this).closest("td").next().text();
+            alert("{fruit_id: " + fruitId + ", fruit_type: " + fruitType + "}");
+        });
+    });
+</script>
+
+</body>
+</html>
