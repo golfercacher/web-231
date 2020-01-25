@@ -1,0 +1,34 @@
+
+<!--
+==================================================
+; Title:  lintel-exercise-7.3.html
+; Author: Jessica Cruse
+; Date:   24 January 2020
+; Modified by: Sean Kenney
+; Date Modified 25 January 2020
+; Description: Fix to program containing two errors
+;=================================================
+-->
+
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <title>Can you find the errors?</title>
+
+      <script>
+        // function = displayTime() (  <--error foud on this line x 2 assignment error and ( is used
+        function displayTime() {
+          var elt = document.getElementById("clock")
+          var now = new Date();
+          elt.innerHTML = now.toLocaleTimeString();
+          setTimeout(displayTime, 1000);
+       // )  <-- Error found here using a (
+          }
+        window.onload = displayTime;
+      </script>
+
+    </head>
+    <body>
+      <h1>It is currently <span id ="clock"></span></h1>
+    </body>
+  </html>
