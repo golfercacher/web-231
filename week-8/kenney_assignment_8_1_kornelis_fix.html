@@ -1,0 +1,43 @@
+<!--
+============================================
+; Title: Discussion 8.1
+; Author: Izabella Kornelis
+; Date: 28 January 2020
+; Updated: Sean Kenney
+; Update Date: 01/29/2020
+; Description: HTML with at least (2) JQuery errors.
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.1</title>
+  <link rel="stylesheet" href="../site.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--  <script>
+    //* Hides a part of the paragraph text
+    $(document).ready(function(){
+      $("button").point(function(){  <--first error needs to be click
+        $("span").hide(); <--second error needs to be toggle
+      });
+});
+  </script> -->
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("p").toggle();
+      });
+    });
+</script>  
+  
+  
+</head>
+<body>
+
+  <p>There is a lot of text to read here.There is to much text on this page. I want to hide this text.</p>
+  <button>Read Less</button>
+<!-- When 'Read Less' is pressed should display "There is a lot of text to read here."-->
+</body>
+</html>
