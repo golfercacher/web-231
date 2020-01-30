@@ -1,0 +1,120 @@
+<!--
+============================================
+; Title:  Saeou-discussion-8.1.html
+; Author: Joann Saeou
+; Date:   29 January 2020
+; Modified by Sean Kenney
+; Modified date 1/30/2020
+; Description: jquery  - find  2 errors.  
+;===========================================
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discussion Board 8.1</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<style type="text/css">
+    #table tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+    table {
+      width:100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+    table tr:nth-child(even) {
+      background-color:lightgreen;
+    }
+    table tr:nth-child(odd) {
+     background-color:darkgreen;
+    }
+    table th {
+      background-color: black;
+      color: white;
+    }
+    </style>
+<script>
+
+
+</script>
+</head>
+<body>
+
+<h1 id="">Week-8 </h1>
+<h5>Discussion Board 8.1 - DOM Manipulation (jQuery)
+</h5>
+<h2>Naruto Shippuden's Character</h2>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td class="main">Naruto</td>
+    <td>Uzumaki</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td class="main">Sasuke</td>
+    <td>Uchiha</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td class="main">Kakashi</td>
+    <td>Hatake</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td class="main">Sakura</td>
+    <td>Haruno</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td class="main">Boruto</td>
+    <td>Uzumaki</td>
+    <td>9</td>
+  </tr>
+  
+</table>
+<br>
+<button>Hide/Show</button> <!-- removed id -->
+
+
+<!--<script type="text/javascript">
+    $("$#Toggles").click(function(){ <!-- used document - this is needed to navigate the element
+      $("p").toggle(); <<!-- I don't see a p tag to toggle
+      $("table").toggle();
+      $("h2").toggle();
+      
+    })
+    $(",table").click(function(){
+      alert($(this)[text()+ " " +$(this);.next()..text());
+    })
+    </script> -->
+  <script>
+    $(document).ready(function(){ 
+      $("button").click(function(){
+        $("table").toggle();
+        $("h2").toggle();
+      });
+    });
+</script>  
+
+
+
+<a href="#week-8">Back to Top</a>  
+</body>
+</html>
