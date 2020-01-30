@@ -1,24 +1,30 @@
 <!--
-==================================================
-; Title:  lintel-exercise-8.4.html
-; Author: Richard Krasso
-; Date:   24 January 2020
-; Modified by: Sean Kenney
-; Date Modified 25 January 2020
-; Description: Display the contents of an array
-;=================================================
+============================================
+; Title:  assignment-8.4.html
+; Author: Professor Krasso
+; Updated: Sean Kenney
+; Date:   1/30/2020
+; Description: 
+;Create a JavaScript constructor employee object with an id, firstName, lastName, and title properties.
+;Create and populate an array of five (5) employee objects.
+;Create a getEmployee() function that accepts an id argument, iterates over the employee's array, and outputs the matched ;employee record using a JavaScript alert box.
+;Create a string variable named "output" and build an HTML table.
+;Iterate over the employee's array and append each employee property using the <td> td> tag. 
+;Assign the output string to the "emps" through the innerHTML function.
+;Register an onClick event for $("table tr") and call the find('td:first').html() function.
+;Using the getEmployee() function find the selected employee object and output the results.
+;===========================================
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Assignment 8.4</title>
+  <title>Kenney Assignment 8.4</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- you will need to the href to point to your root directories css file -->
-  <!-- <link rel="stylesheet" href="/path/to/your/root/css/file"> -->
+ <!--Using css in the html <link rel="stylesheet" href="stylesheet.css"> -->
 
   <style type="text/css">
     #employee tbody tr:hover {
@@ -29,36 +35,54 @@
 </head>
 <body>
 
-    <script> 
-        
-    //sets the id, first name, last name, and title for employee
-    function Employee(id, firstName, lastName, title) {
-      this.id = id;
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.title = title;
-    }
+<div id="employees"></div>
 
-    // create 5 new employees
-    const employees = [
-      new Employee(1, 'Thomas', 'Edison', 'Software Engineer'),
-      new Employee(2, 'Benjamin', 'Franklin', 'Programmer'),
-      new Employee(3, 'Nikola', 'Tesla', 'Project Manager'),
-      new Employee(4, 'Charles', 'Babbage', 'Product Manager'),
-      new Employee(5, 'Alexander', 'Bell', 'Business Analyst')
-    ];
-    </script>
-
-
-<div id="emps"></div>
-
+<!-- Define empoloyee with an ID, first name, last name, and title -->
 <script type="text/javascript">
+function employee(id, firstName, lastName, title){
+  this.id=id;
+  this.firstName=firstName;
+  this.lastName=lastName;
+  this.title=title;
+
+}
+
+//Create 5 empoloyees with values for ID, first name, last name, and title
+var employees = [new employee(1, "John", "Doe", "Program Manager"),
+new employee(2, "Jane", "Smith", "Project Manager"),
+new employee(3, "Kate", "Adams", "Product Owner"),
+new employee(4, "Mike", "Noel", "Technical Lead"),
+new employee(5, "Karina", "Orwell", "Business Sponsor")   ]
+function getEmployee(id){
+  for(var i = 0;i<employees.length;i++){
+ {
+      alert(employees[i].id + " " + employees[i].firstName + " " + employees[i].lastName + " " + employees[i].title)
+    }
+  }
+}
+var output = "<table id = 'employee'>";
+    
+//try to do the table with click
+output+="<tr><th>id</th><th>Firstname</th><th>lastname</th><th>title</th></tr>";
+    for(var i = 0;i<employees.length;i++){
+      output+="<tr>";
+      output+="<td>" + employees[i].id+"</td>";
+      output+="<td>" + employees[i].firstName+"</td>";
+      output+="<td>" + employees[i].lastName+"</td>";
+      output+="<td>" + employees[i].title+"</td>";
+      output+="</tr>";
+    }
+output+="</table>"; 
+document.getElementById("employees").innerHTML=output;
+
+
 
   // jQuery onClick event
   // Don't remove this, just add your code to the body of the event (curly braces)
   $(function () {
-    $("table tr").click(function () {
-
+    $("employee").click(function () {
+var clickemployee= $(this).find("td:first").html();
+getEmployee(clickemployee);
     })
   });
 </script>
